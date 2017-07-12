@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>How to create a post</title>
+  <meta name="description" content="Using shell script">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/jekyll/update/2017/07/12/how-to-create-a-post/">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -55,33 +54,29 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to create a post</h1>
+    <p class="post-meta"><time datetime="2017-07-12T00:00:00-04:00" itemprop="datePublished">Jul 12, 2017</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 12, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="using-shell-script">Using shell script</h2>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2017/07/12/welcome-to-jekyll/">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 12, 2017</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>new_post<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">cd </span>_posts
+  <span class="nv">SLUGIFIED</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="nb">echo</span> -n <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> | sed -e <span class="s1">'s/[^[:alnum:]]/-/g'</span> | tr -s <span class="s1">'-'</span> | tr A-Z a-z<span class="k">)</span><span class="s2">"</span>
+  <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span>date + <span class="s2">"%Y-%m-%d"</span>-<span class="nv">$SLUGIFIED</span>.md<span class="k">)</span>
+  <span class="nb">echo</span> -e <span class="s2">"---</span><span class="se">\l</span><span class="s2">ayout: post</span><span class="se">\n</span><span class="s2">title: '</span><span class="nv">$1</span><span class="s2">'</span><span class="se">\n</span><span class="s2">featured_image: ''</span><span class="se">\n</span><span class="s2">comments: false</span><span class="se">\n</span><span class="s2">tags: </span><span class="se">\n</span><span class="s2">summary: 'Summary here' </span><span class="se">\n</span><span class="s2">##Be Brilliant"</span> &gt; <span class="nv">$SLUG</span>
+  <span class="nb">echo</span> <span class="nv">$SLUG</span>
+  <span class="nb">cd</span> ../
+<span class="o">}</span></code></pre></figure>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2017/07/12/how-to-create-a-post/">How to create a post</a>
-        </h2>
-      </li>
-    
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </div>
 
-</div>
+</article>
 
       </div>
     </div>

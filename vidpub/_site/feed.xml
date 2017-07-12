@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Jul 2017 14:54:24 -0400</pubDate>
-    <lastBuildDate>Wed, 12 Jul 2017 14:54:24 -0400</lastBuildDate>
+    <pubDate>Wed, 12 Jul 2017 15:33:06 -0400</pubDate>
+    <lastBuildDate>Wed, 12 Jul 2017 15:33:06 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -30,6 +30,31 @@
         <pubDate>Wed, 12 Jul 2017 14:40:40 -0400</pubDate>
         <link>http://yourdomain.com/jekyll/update/2017/07/12/welcome-to-jekyll/</link>
         <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2017/07/12/welcome-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>How to create a post</title>
+        <description>&lt;h2 id=&quot;using-shell-script&quot;&gt;Using shell script&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;new_post&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_posts
+  &lt;span class=&quot;nv&quot;&gt;SLUGIFIED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | sed -e &lt;span class=&quot;s1&quot;&gt;&#39;s/[^[:alnum:]]/-/g&#39;&lt;/span&gt; | tr -s &lt;span class=&quot;s1&quot;&gt;&#39;-&#39;&lt;/span&gt; | tr A-Z a-z&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;SLUG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date + &lt;span class=&quot;s2&quot;&gt;&quot;%Y-%m-%d&quot;&lt;/span&gt;-&lt;span class=&quot;nv&quot;&gt;$SLUGIFIED&lt;/span&gt;.md&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -e &lt;span class=&quot;s2&quot;&gt;&quot;---&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\l&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ayout: post&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;title: &#39;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;featured_image: &#39;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;comments: false&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;tags: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;summary: &#39;Summary here&#39; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;##Be Brilliant&quot;&lt;/span&gt; &amp;gt; &lt;span class=&quot;nv&quot;&gt;$SLUG&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$SLUG&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 12 Jul 2017 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2017/07/12/how-to-create-a-post/</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2017/07/12/how-to-create-a-post/</guid>
         
         
         <category>jekyll</category>
