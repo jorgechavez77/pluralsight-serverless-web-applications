@@ -2,6 +2,10 @@
 layout: post
 title: 'How to create a post'
 categories: jekyll update
+featured_image: ''
+comments: false
+tags:
+summary: 'Summary Here'
 ---
 
 ## Using shell script
